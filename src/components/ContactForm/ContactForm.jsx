@@ -10,7 +10,7 @@ const validationSchema = Yup.object({
     .max(50, "Name cannot exceed 50 characters"),
   number: Yup.string()
     .required("Number is required")
-    .matches(/^\d+$-/, "Number must contain only digits"),
+    .matches(-/^\d+$/, "Number must contain only digits"),
 });
 
 const ContactForm = ({ onSubmit }) => {
